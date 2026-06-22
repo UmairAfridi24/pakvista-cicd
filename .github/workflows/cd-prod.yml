@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy to Render
-        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_PROD_URL }}
+        run: curl -X POST ${{ secrets.https://api.render.com/deploy/srv-d8sheq7avr4c73fq46b0?key=i40HMqIil5Y }}
 
       - name: Confirm
         run: echo "Deployment to PROD triggered at $(date)"
