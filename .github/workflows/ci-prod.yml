@@ -23,15 +23,15 @@ jobs:
 
       - uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.umairafridi24 }}
+          password: ${{ secrets.dckr_pat_9jv7RiiUMizYSYzVDMRt6rCedcU }}
 
       - name: Build Prod Image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:prod-latest .
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:prod-latest ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:prod-${{ github.sha }}
+          docker build -t ${{ secrets.umairafridi24 }}/pakvista:prod-latest .
+          docker tag ${{ secrets.umairafridi24 }}/pakvista:prod-latest ${{ secrets.umairafridi24 }}/pakvista:prod-${{ github.sha }}
 
       - name: Push Images
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:prod-latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:prod-${{ github.sha }}
+          docker push ${{ secrets.umairafridi24 }}/pakvista:prod-latest
+          docker push ${{ secrets.umairafridi24 }}/pakvista:prod-${{ github.sha }}
