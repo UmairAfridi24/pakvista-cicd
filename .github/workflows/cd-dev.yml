@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Render
-        run: curl -X POST ${{ secrets.https://api.render.com/deploy/srv-d8shc2r7uimc738cppv0?key=NeyjchWa9YU }}
+        run: curl -X POST ${{ secrets.render.com/deploy/srv-d8shc2r7uimc738cppv0?key=NeyjchWa9YU }}
 
       - name: Confirm Deployment
         run: echo "Deployment to DEV triggered at $(date)"
